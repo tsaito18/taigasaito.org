@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import profileImage from "../assets/me.webp";
+---
+
+<BaseLayout>
+  <main class="mx-auto max-w-2xl px-4 pt-24 pb-8">
+    <Image
+      src={profileImage}
+      loading="eager"
+      alt="プロフィール画像"
+      class="size-32 rounded-full object-cover"
+    />
+    <h1 class="mt-3 text-2xl font-bold">齋藤 大雅</h1>
+    <p>大学生 / 京都</p>
+    <p>
+      Contact:
+      <a
+        class="text-primary underline underline-offset-2"
+        href="mailto:me@taigasaito.org"
+      >
+        me@taigasaito.org
+      </a>
+    </p>
+
+    <!-- <hr class="my-6" />
+
+    <h2 class="mt-6 text-xl font-bold">About</h2>
+    <p>[自己紹介をここに数行で]</p>
+
+    <h2 class="mt-6 text-xl font-bold">Skills</h2>
+    <ul class="list-inside list-disc">
+      <li>[言語1]</li>
+      <li>[言語2]</li>
+      <li>[フレームワーク / ツール]</li>
+    </ul>
+
+    <h2 class="mt-6 text-xl font-bold">Affiliation</h2>
+    <ul class="list-inside list-disc">
+      <li>[所属組織名] (YYYY-)</li>
+    </ul>
+
+    <h2 class="mt-6 text-xl font-bold">Career</h2>
+    <ul class="list-inside list-disc">
+      <li>YYYY-MM ─ [出来事]</li>
+      <li>YYYY-MM ─ [出来事]</li>
+    </ul>
+
+    <h2 class="mt-6 text-xl font-bold">Works</h2>
+    <ul class="list-inside list-disc">
+      <li>
+        <a class="text-primary underline" href="#">[プロジェクト名]</a>
+        ─ [短い説明]
+      </li>
+      <li>
+        <a class="text-primary underline" href="#">[プロジェクト名]</a>
+        ─ [短い説明]
+      </li>
+    </ul> -->
+  </main>
+</BaseLayout>
