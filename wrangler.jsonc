@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "tsaito18",
+  "compatibility_date": "2026-05-27",
+  "assets": {
+    "directory": "./dist",
+  },
+  "routes": [
+    {
+      "pattern": "taigasaito.org",
+      "custom_domain": true,
+    },
+  ],
+}
