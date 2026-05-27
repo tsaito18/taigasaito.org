@@ -3,4 +3,6 @@
 @theme {
   --color-primary: #1a4472;
   --color-surface: #f4f6f8;
+
+  --font-sans: "Zen Kaku Gothic New", sans-serif;
 }
