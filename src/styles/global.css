@@ -13,7 +13,25 @@
     @apply text-primary underline underline-offset-3;
   }
 
+  a:hover {
+    @apply no-underline;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
   a:visited {
     @apply text-secondary;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a:hover {
+      transition: none;
+    }
   }
 }
