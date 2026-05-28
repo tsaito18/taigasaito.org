@@ -3,6 +3,24 @@ import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import profileImage from "../assets/me.webp";
+
+const works = [
+  {
+    title: "剣道スコア表",
+    description: "Web 上で簡単に剣道のスコア表をつけられるアプリ。",
+    link: "https://kendo-score.taigasaito.org",
+  },
+  {
+    title: "チャレンジ AI クイズ",
+    description: "高校の授業で制作した、問題を AI が自動生成するクイズアプリ。",
+    link: "https://github.com/tsaito18/aiquiz",
+  },
+  {
+    title: "khr2026_team1_rspi",
+    description: "関西春ロボコン 2026 に出場した際の制御プログラム郡。",
+    link: "https://github.com/DRC-org/khr2026_team1_rspi",
+  },
+];
 ---
 
 <BaseLayout>
@@ -17,12 +35,7 @@ import profileImage from "../assets/me.webp";
     <p>大学生 / 京都</p>
     <p>
       Contact:
-      <a
-        class="text-primary underline underline-offset-2"
-        href="mailto:me@taigasaito.org"
-      >
-        me@taigasaito.org
-      </a>
+      <a href="mailto:me@taigasaito.org"> me@taigasaito.org </a>
     </p>
 
     <hr class="my-6" />
@@ -34,8 +47,8 @@ import profileImage from "../assets/me.webp";
     <ul class="list-inside list-disc">
       <li>TypeScript</li>
       <li>Next.js, React, Tailwind CSS, ...</li>
-      <li>and more...</li>
     </ul>
+    <p>and more...</p>
 
     <h2 class="mt-6 text-xl font-bold">Affiliation</h2>
     <ul class="list-inside list-disc">
@@ -45,7 +58,14 @@ import profileImage from "../assets/me.webp";
 
     <h2 class="mt-6 text-xl font-bold">Works</h2>
     <ul class="list-inside list-disc">
-      <li>掲載準備中</li>
+      {
+        works.map((work) => (
+          <li>
+            <a href={work.link}>{work.title}</a> ― {work.description}
+          </li>
+        ))
+      }
     </ul>
+    <p>and more...</p>
   </main>
 </BaseLayout>
