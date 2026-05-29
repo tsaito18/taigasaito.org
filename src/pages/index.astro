@@ -21,6 +21,31 @@ const works = [
     link: "https://github.com/DRC-org/khr2026_team1_rspi",
   },
 ];
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "齋藤 大雅",
+  alternateName: "Taiga Saito",
+  jobTitle: "学生",
+  url: "https://taigasaito.org",
+  email: "me@taigasaito.org",
+  image: "https://taigasaito.org/og-image.webp",
+  sameAs: ["https://github.com/tsaito18"],
+  knowsAbout: [
+    "TypeScript",
+    "Web 開発",
+    "組み込み開発",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+  ],
+  alumniOf: [{ "@type": "EducationalOrganization", name: "同志社高等学校" }],
+  affiliation: {
+    "@type": "CollegeOrUniversity",
+    name: "同志社大学 理工学部電子工学科",
+  },
+};
 ---
 
 <BaseLayout>
@@ -87,4 +112,5 @@ const works = [
     </ul>
     <p>and more...</p>
   </main>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 </BaseLayout>
